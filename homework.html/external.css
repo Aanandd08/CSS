@@ -1,0 +1,28 @@
+h1{
+    background-color: rgb(24, 182, 182);
+}
+a{
+    background-color:yellow;
+}
+h2{
+    background-color: deeppink;
+}
+p{
+    color: antiquewhite;
+}
+
+body{
+    background-color: antiquewhite;
+}
+#box{
+    background-color: black;
+}
+#robotics{
+    background-color: aqua;
+}
+#data{
+    background-color: cyan;
+}
+footer{
+    color: rgb(99, 18, 174);
+}
