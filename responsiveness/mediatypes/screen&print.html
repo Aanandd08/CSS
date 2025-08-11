@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            background-color: lightblue;
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+           /* applies only when viewed on a screen  */
+
+        @media print {                  /* screen and print*/ 
+            .content{
+                background-color: orange;
+                font-size: 16px;
+                color: aqua;
+                border: 1px solid black;
+
+            }
+        }
+    </style>
+</head>
+<body>
+      <div class="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, atque!
+      </div>
+</body>
+</html>

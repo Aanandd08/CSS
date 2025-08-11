@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav (CSS Only)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            background-image: url("https://cdn.prod.website-files.com/634c6456cfea25b619c71ab9/634c6456cfea255d12c71abf_Logo.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 100px;
+            height: 50px;
+        }
+
+        .header {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+
+        .contact {
+            background-color: navy;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        .contact:hover {
+            background-color: maroon;
+        }
+
+        /* Hamburger menu toggle setup */
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .menu-icon span {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: flex;
+            }
+
+            .header {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: white;
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 1;
+            }
+
+            #menu-toggle:checked + .menu-icon + .header {
+                display: flex;
+            }
+        }
+
+        .content {
+            background: url("https://img.freepik.com/premium-vector/modern-science-with-abstract-lines_972536-77.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            height: 65vh;
+            margin-top: 20px;
+        }
+
+        .detail {
+            padding-top: 80px;
+            padding-left: 80px;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .short {
+            font-size: 10px;
+            font-weight: 100;
+        }
+
+        .icons {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .names {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        button {
+            height: 35px;
+            padding: 5px 15px;
+            border: none;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"></div>
+
+        <!-- Hidden checkbox toggle -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Hamburger icon -->
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Nav links -->
+        <div class="header">
+            <a href="#">PORTFOLIO</a>
+            <a href="#">SERVICES</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">BLOG</a>
+            <a class="contact" href="#">CONTACT US</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="detail">
+            <h2>Mobile and Web Apps <br>
+                Developed Right the <br>
+                First Time.</h2>
+            <p class="short">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <button type="submit">GET IN TOUCH</button>
+        </div>
+    </div>
+
+    <div>
+        <h3 style="text-align: center; margin: 30px 0;">Our Services</h3>
+        <div class="icons">
+            <div>
+                <img src="https://cdn-icons-png.freepik.com/512/4808/4808458.png" alt="mobile"
+                    style="width: 200px; height: 200px;">
+                <p class="names">MOBILE APP <br> DEVELOPMENT</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquam, vero repellat fugiat.</p>
+            </div>
+
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxRSoMscBHGizvaeUoTejPAZtPQ6k8pAF-ug&s"
+                    alt="app" style="width: 200px; height: 200px;">
+                <p class="names">APP DESIGN</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora optio fugiat pariatur!</p>
+            </div>
+
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGwsk-mw1LIOZV9rHZKzywZ2FPR-1482B53A&s"
+                    alt="web" style="width: 200px; height: 200px;">
+                <p class="names">WEB <br> DEVELOPEMENT</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sequi enim earum.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

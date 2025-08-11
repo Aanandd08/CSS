@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+             /* justify-content: end;  */
+            /* align-items: center;  */
+            display: flex;
+            gap: 15px;
+            /* padding: 0 20px;  */
+        }
+
+        nav {
+            background-color: whitesmoke;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            
+        }
+
+
+
+        .header a {
+            text-decoration: none;
+            /* color: black;  */
+        }
+
+        .content {
+            background: url("https://img.freepik.com/premium-vector/modern-science-with-abstract-lines_972536-77.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            height: 65vh;
+            margin-top: 30px;
+
+
+        }
+
+        .detail {
+            padding-top: 80px;
+            padding-left: 80px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 900;
+
+        }
+
+        .short {
+            font-size: 10px;
+            font-weight: 100;
+        }
+
+        .icons {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .names {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .contact {
+            background-color: navy;
+            color: white;
+        }
+
+        .contact:hover {
+            background-color: maroon;
+        }
+
+        button:hover{
+            background-color: rgba(19, 133, 57, 0.655);
+            color: white;
+        }
+
+        button{
+            border: 0;
+            /* font-weight: 400;  */
+        }
+
+
+        .logo {
+            background-image: url("https://cdn.prod.website-files.com/634c6456cfea25b619c71ab9/634c6456cfea255d12c71abf_Logo.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 100px;
+            height: 50px;
+
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .menu-icon span {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+        }
+
+        @media    (max-width:835px) {
+            .menu-icon {
+                display: flex;
+            }
+
+            .header {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                background-color: white;
+                padding: 10px;
+
+            }
+
+            #menu-toggle:checked+.menu-icon+.header {
+                display: flex;
+            }
+        }
+
+        @media (max-width:400px){
+            .icons{
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"> </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+
+
+        <div class="header">
+
+            <a href="#">PORTFOLIO</a>
+            <a href="#">SERVICES</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">BLOG</a>
+            <a class="contact" href="#">CONTACT US</a>
+        </div>
+
+
+    </nav>
+
+
+
+
+    <div class="content">
+        <div class="detail">
+            <h2>Mobile and Web Apps <br>
+                Developed Right the <br>
+                First Time.</h2>
+            <p class="short">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <button type="submit" style="height: 30px;">GET IN TOUCH</button>
+        </div>
+    </div>
+
+
+    <div>
+        <h2 style="text-align: center;">Our Services</h2>
+
+        <div class="icons">
+            <div>
+                <img src="https://cdn-icons-png.freepik.com/512/4808/4808458.png" alt="mobile"
+                    style="width: 150px; height: 150px;">
+                <p class="names">MOBILE APP <br>
+                    DEVELOPMENT</p>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquam, vero repellat fugiat</P>
+
+            </div>
+
+            <div>
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxRSoMscBHGizvaeUoTejPAZtPQ6k8pAF-ug&s"
+                    alt="app" style="width: 150px; height: 150px;">
+                <p class="names">APP DESIGN</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora optio fugiat pariatur!</p>
+
+            </div>
+
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGwsk-mw1LIOZV9rHZKzywZ2FPR-1482B53A&s"
+                    alt="web" style="width: 150px; height: 150px;">
+                <p class="names">WEB <br>
+                    DEVELOPEMENT</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sequi enim earum.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+:root{
+    --main-color:blue;
+    --padding-size:15px;
+}
+
+
+
+.header{
+    justify-content: center;
+    align-items: center;
+    /* display: flex;  */
+    text-align: center;
+
+}
+
+.grid-container{
+     display: grid;
+     grid-template-columns: 1fr 1fr  ;
+     grid-template-areas: 
+                       "easyprofile    skill" 
+                       "educate        word " 
+                       "contacts     expert" ;
+      gap: 50px; 
+      padding:  40px 20px; 
+      
+
+      
+
+}
+.profile{
+    grid-area: easyprofile;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    margin-left: 100px;
+    padding: var(--padding-size);
+    
+    
+
+}
+.skills{
+    grid-area: skill;
+    background-color: var(--main-color);
+    color:white;
+    width:500px;
+    height: 200px;
+     padding: var(--padding-size);
+     margin-left: -300px;
+
+    
+    
+}
+ .education{
+    grid-area: educate;
+    background-color:var(--main-color);
+    color: white;
+     width: 800px;
+    height: 200px;
+    margin-left: 100px;
+     padding: var(--padding-size);
+     
+ }
+ .language{
+    grid-area: word;
+    background-color: white;
+     width: 200px;
+    height: 200px;
+     padding: var(--padding-size);
+
+ }
+ .contact{
+    grid-area: contacts;
+    background-color: white;
+     width: 200px;
+    height: 200px;
+    margin-left: 100px;
+     padding:  var(--padding-size);
+ }
+ .experience{
+    grid-area: expert;
+    background-color: var(--main-color);
+    color: white;
+     width: 800px;
+    height: 200px;
+     padding: var(--padding-size);
+     margin-left: -600px;
+ }
+ .footer{
+    text-align: center;
+    margin-left: 500px;
+    color: white;
+    font-size: 20px;
+ }
+body{
+    background: url("https://media.istockphoto.com/id/1272711223/photo/world-environment-day-concept-green-mountains-and-beautiful-blue-sky-clouds.jpg?s=612x612&w=0&k=20&c=jcZe-mHZuLB20q2h8VhYO9Oe3SP2ASMWozhd7oicpLM=");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--main-color);
+    padding: var(--padding-size);
+    /* background: transparent var(--main-color);  */
+    /* opacity: 1;  */
+}
+ 
